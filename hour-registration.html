@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hour Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="header">
+    <h1>Hour Registration</h1>
+</div>
+
+<button id="new-hour-registration">Create New Hour Registration</button>
+
+<table id="hour-table">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>User</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th>Total Hours</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody id="hour-data">
+        <!-- Data will be populated here -->
+    </tbody>
+</table>
+
+<div id="popup" style="display: none;">
+    <h2>Register New Hour</h2>
+    <form id="registerForm">
+        <label for="date">Date:</label><br>
+        <input type="date" id="date" name="date"><br>
+        <label for="user">User:</label><br>
+        <select id="user" name="user"></select><br>
+        <label for="start-time">Start Time:</label><br>
+        <input type="time" id="start-time" name="start-time" value="07:59"><br>
+        <label for="end-time">End Time:</label><br>
+        <input type="time" id="end-time" name="end-time" value="16:29"><br>
+        <label for="status">Status:</label><br>
+        <select id="status" name="status">
+            <option value="registered">Registered</option>
+            <option value="approved">Approved</option>
+            <option value="declined">Declined</option>
+        </select><br>
+        <label for="job-type">Job Type:</label><br>
+        <select id="job-type" name="job-type">
+            <option value="100%">100%</option>
+            <option value="saturday">Saturday</option>
+            <option value="holiday">Holiday</option>
+            <option value="sick-leave">Sick Leave</option>
+            <option value="unpaid">Unpaid</option>
+        </select><br>
+        <label for="note">Note:</label><br>
+        <textarea id="note" name="note" maxlength="100"></textarea><br>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<button id="close-popup">Close</button>
+
+<script src="scripts.js"></script>
+
+</body>
+</html>
